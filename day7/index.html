@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="text" id="inputText" placeholder="Enter text">
+    <button onclick="addIteam()">add</button>
+    <p id="output"></p>
+  <script>
+  
+     function addIteam(){
+        let inputField = document.getElementById("inputText");
+        let text = inputField.value;
+
+        //create new para 
+        let para = document.createElement("p");
+        para.textContent = text;
+
+        //append new element
+
+        let outElement = document.getElementById("output");
+        outElement.appendChild(para);
+
+        inputField.value='';
+
+     }
+    
+
+  </script>
+
+</body>
+</html>
